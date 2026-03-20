@@ -595,7 +595,7 @@
     </style>
 </head>
 
-<body>
+<body style="opacity:0;transition:opacity 0.15s">
     <div class="bg-glow"></div>
 
     <header>
@@ -611,7 +611,18 @@
             <span style="font-family: 'Outfit', sans-serif;">OptiMicro<span
                     style="color: var(--accent-cyan);">Tools</span></span>
         </a>
-        <button class="lang-switch" id="langToggle">EN</button>
+        <div id="lang-toggle"
+            style="display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:999px;cursor:pointer;backdrop-filter:blur(12px);"
+            onclick="toggleLanguage()">
+            <span style="font-size:0.75rem;font-weight:700;opacity:0.7;">EN</span>
+            <div
+                style="width:40px;height:20px;background:rgba(255,255,255,0.1);border-radius:999px;position:relative;display:flex;align-items:center;padding:0 2px;">
+                <div id="toggle-circle"
+                    style="width:16px;height:16px;background:var(--accent-cyan);border-radius:50%;box-shadow:0 0 10px rgba(6,182,212,0.5);transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);">
+                </div>
+            </div>
+            <span style="font-size:0.75rem;font-weight:700;opacity:0.7;">ES</span>
+        </div>
     </header>
 
     <main>
@@ -716,12 +727,243 @@
         </section>
     </main>
 
+
+    <!-- Static SEO Content — bilingual -->
+    <div style="max-width:900px;margin:2rem auto;padding:0 1.5rem;">
+        <div
+            style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:1.5rem;padding:2rem;">
+
+            <div id="seo-es">
+                <h2 style="font-size:1.2rem;font-weight:800;color:var(--accent-cyan);margin-bottom:.75rem;">¿Qué es Link
+                    Shield y para qué sirve?</h2>
+                <p style="font-size:.85rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;"><strong
+                        style="color:var(--text-primary);">Link Shield</strong> es una herramienta gratuita de análisis
+                    de seguridad de URLs que revela el destino final de cualquier enlace sospechoso o acortado antes de
+                    que lo visites. Expande links de bit.ly, tinyurl y similares, detecta redirecciones encadenadas y
+                    evalúa indicadores de riesgo — todo procesado de forma segura sin que tu navegador visite la URL
+                    analizada.</p>
+                <div
+                    style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem;">
+                    <div
+                        style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;">
+                        <h3
+                            style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:.5rem;">
+                            Expansión de links</h3>
+                        <p style="font-size:.75rem;color:var(--text-muted);line-height:1.6;">Sigue todas las
+                            redirecciones de un enlace acortado hasta revelar la URL destino final, incluyendo cadenas
+                            múltiples.</p>
+                    </div>
+                    <div
+                        style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;">
+                        <h3
+                            style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:.5rem;">
+                            Análisis de seguridad</h3>
+                        <p style="font-size:.75rem;color:var(--text-muted);line-height:1.6;">Evalúa indicadores de
+                            riesgo como dominios sospechosos, patrones de phishing y URLs con parámetros maliciosos.</p>
+                    </div>
+                    <div
+                        style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;">
+                        <h3
+                            style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:.5rem;">
+                            Sin visitar el link</h3>
+                        <p style="font-size:.75rem;color:var(--text-muted);line-height:1.6;">El análisis se realiza
+                            desde el servidor sin que tu navegador acceda a la URL sospechosa — protección real.</p>
+                    </div>
+                </div>
+                <div style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);margin-bottom:1.5rem;">
+                    <h3
+                        style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1rem;">
+                        Casos de uso frecuentes</h3>
+                    <div
+                        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.75rem;font-size:.75rem;color:var(--text-muted);line-height:1.7;">
+                        <div style="display:flex;gap:.5rem;"><span
+                                style="color:var(--accent-cyan);font-weight:700;">→</span>
+                            <p><strong style="color:var(--text-primary);">Phishing y scam:</strong> Verifica links
+                                sospechosos de emails, WhatsApp o SMS antes de abrirlos.</p>
+                        </div>
+                        <div style="display:flex;gap:.5rem;"><span
+                                style="color:var(--accent-cyan);font-weight:700;">→</span>
+                            <p><strong style="color:var(--text-primary);">Links acortados:</strong> Descubre el destino
+                                real de bit.ly, tinyurl, t.co y otros acortadores antes de hacer click.</p>
+                        </div>
+                        <div style="display:flex;gap:.5rem;"><span
+                                style="color:var(--accent-cyan);font-weight:700;">→</span>
+                            <p><strong style="color:var(--text-primary);">Seguridad corporativa:</strong> Valida URLs en
+                                documentos, PDFs o mensajes internos antes de distribuirlos.</p>
+                        </div>
+                        <div style="display:flex;gap:.5rem;"><span
+                                style="color:var(--accent-cyan);font-weight:700;">→</span>
+                            <p><strong style="color:var(--text-primary);">Auditoría de campañas:</strong> Verifica que
+                                los links en campañas de marketing apuntan al destino correcto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);margin-bottom:1.5rem;">
+                    <h3
+                        style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1rem;">
+                        Preguntas frecuentes</h3>
+                    <div
+                        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;font-size:.75rem;">
+                        <div>
+                            <p style="font-weight:700;color:var(--text-primary);margin-bottom:.25rem;">¿Mi navegador
+                                visita el link analizado?</p>
+                            <p style="color:var(--text-muted);line-height:1.6;">No. El análisis se realiza remotamente.
+                                Tu dispositivo nunca accede directamente a la URL sospechosa.</p>
+                        </div>
+                        <div>
+                            <p style="font-weight:700;color:var(--text-primary);margin-bottom:.25rem;">¿Detecta todos
+                                los links maliciosos?</p>
+                            <p style="color:var(--text-muted);line-height:1.6;">Detecta patrones comunes de phishing y
+                                dominios sospechosos. No reemplaza un antivirus, pero es una primera capa de protección.
+                            </p>
+                        </div>
+                        <div>
+                            <p style="font-weight:700;color:var(--text-primary);margin-bottom:.25rem;">¿Se guardan las
+                                URLs que analizo?</p>
+                            <p style="color:var(--text-muted);line-height:1.6;">No almacenamos las URLs analizadas en
+                                ninguna base de datos. Cada consulta es efímera.</p>
+                        </div>
+                        <div>
+                            <p style="font-weight:700;color:var(--text-primary);margin-bottom:.25rem;">¿Es completamente
+                                gratuito?</p>
+                            <p style="color:var(--text-muted);line-height:1.6;">Sí. Sin registro, en <a
+                                    href="https://safe.optimicrotools.com"
+                                    style="color:var(--accent-cyan);">safe.optimicrotools.com</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;">
+                    <p style="font-size:.75rem;color:var(--text-muted);opacity:.5;">Parte de <a
+                            href="https://optimicrotools.com" style="color:var(--accent-cyan);">OptiMicroTools</a> — 9
+                        herramientas gratuitas.</p>
+                    <div style="display:flex;gap:1rem;font-size:.75rem;opacity:.5;"><a
+                            href="https://optimicrotools.com/blog.html" style="color:var(--text-muted);">Blog
+                            técnico</a><a href="https://myip.optimicrotools.com" style="color:var(--text-muted);">Trace
+                            Auditor</a><a href="https://sanitizer.optimicrotools.com"
+                            style="color:var(--text-muted);">SanitizePro</a></div>
+                </div>
+            </div>
+
+            <div id="seo-en" style="display:none;">
+                <h2 style="font-size:1.2rem;font-weight:800;color:var(--accent-cyan);margin-bottom:.75rem;">What is Link
+                    Shield and what is it for?</h2>
+                <p style="font-size:.85rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;"><strong
+                        style="color:var(--text-primary);">Link Shield</strong> is a free URL security analysis tool
+                    that reveals the final destination of any suspicious or shortened link before you visit it. Expands
+                    bit.ly, tinyurl and similar links, detects chained redirects and evaluates risk indicators — all
+                    processed safely without your browser visiting the analyzed URL.</p>
+                <div
+                    style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem;">
+                    <div
+                        style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;">
+                        <h3
+                            style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:.5rem;">
+                            Link expansion</h3>
+                        <p style="font-size:.75rem;color:var(--text-muted);line-height:1.6;">Follows all redirects from
+                            a shortened link to reveal the final destination URL, including multiple chains.</p>
+                    </div>
+                    <div
+                        style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;">
+                        <h3
+                            style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:.5rem;">
+                            Security analysis</h3>
+                        <p style="font-size:.75rem;color:var(--text-muted);line-height:1.6;">Evaluates risk indicators
+                            like suspicious domains, phishing patterns and URLs with malicious parameters.</p>
+                    </div>
+                    <div
+                        style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:1rem;padding:1rem;">
+                        <h3
+                            style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:.5rem;">
+                            Without visiting</h3>
+                        <p style="font-size:.75rem;color:var(--text-muted);line-height:1.6;">Analysis is done remotely
+                            without your browser accessing the suspicious URL — real protection.</p>
+                    </div>
+                </div>
+                <div style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);margin-bottom:1.5rem;">
+                    <h3
+                        style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1rem;">
+                        Common use cases</h3>
+                    <div
+                        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.75rem;font-size:.75rem;color:var(--text-muted);line-height:1.7;">
+                        <div style="display:flex;gap:.5rem;"><span
+                                style="color:var(--accent-cyan);font-weight:700;">→</span>
+                            <p><strong style="color:var(--text-primary);">Phishing and scam:</strong> Verify suspicious
+                                links from emails, WhatsApp or SMS before opening them.</p>
+                        </div>
+                        <div style="display:flex;gap:.5rem;"><span
+                                style="color:var(--accent-cyan);font-weight:700;">→</span>
+                            <p><strong style="color:var(--text-primary);">Shortened links:</strong> Discover the real
+                                destination of bit.ly, tinyurl, t.co and other shorteners before clicking.</p>
+                        </div>
+                        <div style="display:flex;gap:.5rem;"><span
+                                style="color:var(--accent-cyan);font-weight:700;">→</span>
+                            <p><strong style="color:var(--text-primary);">Corporate security:</strong> Validate URLs in
+                                documents, PDFs or internal messages before distributing them.</p>
+                        </div>
+                        <div style="display:flex;gap:.5rem;"><span
+                                style="color:var(--accent-cyan);font-weight:700;">→</span>
+                            <p><strong style="color:var(--text-primary);">Campaign auditing:</strong> Verify that links
+                                in marketing campaigns point to the correct destination.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);margin-bottom:1.5rem;">
+                    <h3
+                        style="font-size:.7rem;font-weight:800;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1rem;">
+                        Frequently asked questions</h3>
+                    <div
+                        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;font-size:.75rem;">
+                        <div>
+                            <p style="font-weight:700;color:var(--text-primary);margin-bottom:.25rem;">Does my browser
+                                visit the analyzed link?</p>
+                            <p style="color:var(--text-muted);line-height:1.6;">No. Analysis is done remotely. Your
+                                device never directly accesses the suspicious URL.</p>
+                        </div>
+                        <div>
+                            <p style="font-weight:700;color:var(--text-primary);margin-bottom:.25rem;">Does it detect
+                                all malicious links?</p>
+                            <p style="color:var(--text-muted);line-height:1.6;">Detects common phishing patterns and
+                                suspicious domains. It doesn't replace antivirus but adds a first layer of protection.
+                            </p>
+                        </div>
+                        <div>
+                            <p style="font-weight:700;color:var(--text-primary);margin-bottom:.25rem;">Are the URLs I
+                                analyze stored?</p>
+                            <p style="color:var(--text-muted);line-height:1.6;">We do not store analyzed URLs in any
+                                database. Each query is ephemeral.</p>
+                        </div>
+                        <div>
+                            <p style="font-weight:700;color:var(--text-primary);margin-bottom:.25rem;">Is it completely
+                                free?</p>
+                            <p style="color:var(--text-muted);line-height:1.6;">Yes. No registration, at <a
+                                    href="https://safe.optimicrotools.com"
+                                    style="color:var(--accent-cyan);">safe.optimicrotools.com</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;">
+                    <p style="font-size:.75rem;color:var(--text-muted);opacity:.5;">Part of <a
+                            href="https://optimicrotools.com" style="color:var(--accent-cyan);">OptiMicroTools</a> — 9
+                        free tools.</p>
+                    <div style="display:flex;gap:1rem;font-size:.75rem;opacity:.5;"><a
+                            href="https://optimicrotools.com/blog.html" style="color:var(--text-muted);">Technical
+                            blog</a><a href="https://myip.optimicrotools.com" style="color:var(--text-muted);">Trace
+                            Auditor</a><a href="https://sanitizer.optimicrotools.com"
+                            style="color:var(--text-muted);">SanitizePro</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <p>© 2026 OptiMicroTools • Link Shield</p>
             <div class="footer-links">
-                <a href="#" id="privacyBtn" class="f-link">Privacy</a>
-                <a href="#" id="termsBtn" class="f-link">Terms</a>
+                <a href="https://optimicrotools.com/privacy.html" id="privacyBtn" class="f-link">Privacy</a>
+                <a href="https://optimicrotools.com/terms.html" id="termsBtn" class="f-link">Terms</a>
                 <a href="#" id="contactBtn" class="f-link">Contact</a>
             </div>
             <a href="#" class="support-link" id="supportBtn">
@@ -775,30 +1017,19 @@
                 <a href="https://x.com/optimicrotools" target="_blank" class="contact-btn btn-x">
                     <span>𝕏 (@optimicrotools)</span>
                 </a>
-                <a href="mailto:jota302@gmail.com" class="contact-btn btn-email">
-                    <span>✉️ jota302@gmail.com</span>
+                <a href="/cdn-cgi/l/email-protection#a9c3c6ddc89a999be9cec4c8c0c587cac6c4"
+                    class="contact-btn btn-email">
+                    <span>✉️ <span class="__cf_email__"
+                            data-cfemail="0d6762796c3e3d3f4d6a606c6461236e6260">[email&#160;protected]</span></span>
                 </a>
             </div>
         </div>
     </div>
 
     <!-- Legal Modals -->
-    <div id="privacyModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" id="closePrivacy">×</button>
-            <h2 id="privacyTitle">Privacy Policy</h2>
-            <div class="legal-body" id="privacyBody"></div>
-        </div>
-    </div>
 
-    <div id="termsModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" id="closeTerms">×</button>
-            <h2 id="termsTitle">Terms of Service</h2>
-            <div class="legal-body" id="termsBody"></div>
-        </div>
-    </div>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         const i18n = {
             es: {
@@ -821,10 +1052,6 @@
                 terms: "Términos",
                 contact: "Contacto",
                 contactTitle: "Soporte de Contacto",
-                privacyTitle: "Política de Privacidad",
-                termsTitle: "Términos de Servicio",
-                privacyContent: "En OptiMicroTools, tu privacidad es nuestra prioridad. No almacenamos las URLs que analizas ni recopilamos datos personales. Esta herramienta funciona de forma aislada para garantizar tu seguridad.",
-                termsContent: "Al usar Link Shield, aceptas que esta herramienta se proporciona 'tal cual' sin garantías. El usuario es responsable de los enlaces que decida visitar tras el análisis.",
                 infoTitle: "Análisis Técnico: Cómo Funciona Link Shield",
                 infoDesc: "Link Shield es una herramienta enfocada en la seguridad diseñada para deconstruir y analizar URLs sospechosas o acortadas sin comprometer la integridad de tu dispositivo. Al interceptar cadenas de redirección y analizar los protocolos del destino final, proporciona una vista transparente de hacia dónde lleva realmente un enlace. Esto evita trampas comunes como el 'click-jacking' o el 'phishing', permitiéndote inspeccionar la URL de destino y su certificado de seguridad antes de que tu navegador realice una solicitud directa.",
                 infoHowTo: "Guía de Uso Rápido",
@@ -857,10 +1084,6 @@
                 terms: "Terms",
                 contact: "Contact",
                 contactTitle: "Contact Support",
-                privacyTitle: "Privacy Policy",
-                termsTitle: "Terms of Service",
-                privacyContent: "At OptiMicroTools, your privacy is our priority. We do not store the URLs you analyze or collect personal data. This tool works in isolation to ensure your security.",
-                termsContent: "By using Link Shield, you agree that this tool is provided 'as is' without warranties. The user is responsible for the links they choose to visit after analysis.",
                 infoTitle: "Technical Insights: How Link Shield Works",
                 infoDesc: "Link Shield is a security-focused tool designed to deconstruct and analyze suspicious or shortened URLs without ever compromising your device's integrity. By intercepting redirect chains and analyzing final destination protocols, it provides a transparent view of where a link actually leads. This avoids common pitfalls like 'click-jacking' or 'phishing' by allowing you to inspect the target URL and its security certificate before your browser ever makes a direct request to the potential threat.",
                 infoHowTo: "Quick Usage Guide",
@@ -875,7 +1098,7 @@
             }
         };
 
-        let currentLang = localStorage.getItem('omt_lang') || (navigator.language.startsWith('es') ? 'es' : 'en');
+        let currentLang = localStorage.getItem('lang') || (navigator.language.startsWith('es') ? 'es' : 'en');
 
         function updateLanguage() {
             const t = i18n[currentLang];
@@ -893,17 +1116,24 @@
             document.getElementById('supportLinkText').textContent = t.supportBtn;
             document.getElementById('modalTitle').textContent = t.modalTitle;
             document.getElementById('modalDesc').textContent = t.modalDesc;
-            document.getElementById('langToggle').textContent = currentLang.toUpperCase();
+            const circle = document.getElementById('toggle-circle');
+            if (circle) circle.style.transform = currentLang === 'es' ? 'translateX(20px)' : 'translateX(0)';
+            document.body.style.opacity = '1';
+            const seoEs = document.getElementById('seo-es');
+            const seoEn = document.getElementById('seo-en');
+            if (seoEs) seoEs.style.display = currentLang === 'es' ? '' : 'none';
+            if (seoEn) seoEn.style.display = currentLang === 'en' ? '' : 'none';
+            // Footer links text
+            const pb = document.getElementById('privacyBtn');
+            const tb = document.getElementById('termsBtn');
+            if (pb) pb.textContent = currentLang === 'es' ? 'Privacidad' : 'Privacy';
+            if (tb) tb.textContent = currentLang === 'es' ? 'Términos' : 'Terms';
 
             // Footer & Modals
             document.getElementById('privacyBtn').textContent = t.privacy;
             document.getElementById('termsBtn').textContent = t.terms;
             document.getElementById('contactBtn').textContent = t.contact;
             document.getElementById('contactTitle').textContent = t.contactTitle;
-            document.getElementById('privacyTitle').textContent = t.privacyTitle;
-            document.getElementById('termsTitle').textContent = t.termsTitle;
-            document.getElementById('privacyBody').textContent = t.privacyContent;
-            document.getElementById('termsBody').textContent = t.termsContent;
 
             // Info Section
             document.getElementById('infoTitle').textContent = t.infoTitle;
@@ -918,13 +1148,25 @@
             document.getElementById('faq2Q').textContent = t.faq2Q;
             document.getElementById('faq2A').textContent = t.faq2A;
 
-            localStorage.setItem('omt_lang', currentLang);
+            localStorage.setItem('lang', currentLang);
         }
 
-        document.getElementById('langToggle').addEventListener('click', () => {
+        function toggleLanguage() {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             updateLanguage();
-        });
+        }
+
+        function initLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const validUrlLang = (urlLang === 'es' || urlLang === 'en') ? urlLang : null;
+            const savedLang = localStorage.getItem('lang');
+            const browserLang = navigator.language.startsWith('es') ? 'es' : 'en';
+            currentLang = validUrlLang || savedLang || browserLang;
+            updateLanguage();
+        }
+
+        document.addEventListener('DOMContentLoaded', initLanguage);
 
         // URL Analysis Logic
         function sanitizeUrl(url) {
@@ -1040,9 +1282,7 @@
         // Modal Controls
         const modals = {
             support: document.getElementById('supportModal'),
-            contact: document.getElementById('contactModal'),
-            privacy: document.getElementById('privacyModal'),
-            terms: document.getElementById('termsModal')
+            contact: document.getElementById('contactModal')
         };
 
         function openModal(id) {
@@ -1057,13 +1297,9 @@
 
         document.getElementById('supportBtn').addEventListener('click', (e) => { e.preventDefault(); openModal('support'); });
         document.getElementById('contactBtn').addEventListener('click', (e) => { e.preventDefault(); openModal('contact'); });
-        document.getElementById('privacyBtn').addEventListener('click', (e) => { e.preventDefault(); openModal('privacy'); });
-        document.getElementById('termsBtn').addEventListener('click', (e) => { e.preventDefault(); openModal('terms'); });
 
         document.getElementById('closeModal').addEventListener('click', () => closeModal('support'));
         document.getElementById('closeContact').addEventListener('click', () => closeModal('contact'));
-        document.getElementById('closePrivacy').addEventListener('click', () => closeModal('privacy'));
-        document.getElementById('closeTerms').addEventListener('click', () => closeModal('terms'));
 
         window.onclick = (event) => {
             Object.keys(modals).forEach(key => {
@@ -1072,12 +1308,15 @@
         };
 
         // Crypto Copy
-        document.getElementById('cryptoAddress').addEventListener('click', function () {
-            const address = this.querySelector('span').textContent;
-            copyToClipboard(address, this);
+        document.getElementById('cryptoAddress').addEventListener('click', () => {
+            const addr = document.getElementById('cryptoAddress').querySelector('span').textContent.trim();
+            navigator.clipboard.writeText(addr).then(() => {
+                const el = document.getElementById('cryptoAddress');
+                el.style.opacity = '0.5';
+                setTimeout(() => el.style.opacity = '1', 1500);
+            }).catch(() => { });
         });
 
-        updateLanguage();
     </script>
 </body>
 
